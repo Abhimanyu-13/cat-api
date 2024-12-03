@@ -1,9 +1,14 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // Includes all relevant React files
-  ],
+  content: ["./src/**/*.{html,js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        navbarColor: "#0f1111",
+        headlineColor: "rgb(14 162 152)",
+        headlineTextColor: "#555"
+      }
+    },
   },
   plugins: [],
-};
+}
