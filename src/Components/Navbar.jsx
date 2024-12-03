@@ -12,7 +12,6 @@ export const Navbar = () => {
       </Link>
       <div className="hidden md:flex items-center space-x-6">
         <Link to="/" className="hover:border px-4 py-2 rounded-lg border-slate-300">Home</Link>
-        
         <Link to="/login" className="hover:border px-4 py-2 rounded-lg border-slate-300">Login</Link>
       </div>
     </nav>
