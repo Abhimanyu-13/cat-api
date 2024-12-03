@@ -37,14 +37,14 @@ export const LoginPage = () => {
 
   return (
     <div className="w-screen h-screen flex justify-center items-center">
-      <div className="bg-green-300 px-12 py-4 shadow-2xl rounded-2xl justify-center border-4 max-w-[1000px]">
+      <div className=" px-12 py-4 shadow-2xl rounded-sm justify-center border-2 border-gray-300 max-w-[1000px]">
         <h1 className='font-bold text-3xl mt-2 mb-4'>Login</h1>
         <form onSubmit={handleLogin}>
           <div>
             <label>
               Username:
               <input
-                className="mt-2 flex border-2 border-x-gray-400  rounded-2xl items-center p-2 h-10 w-60"
+                className="mt-2 flex border-2 border-gray-400  rounded-lg items-center p-2 h-10 w-60"
                 type="text"
                 placeholder="Enter Username"
                 value={username}
@@ -53,11 +53,12 @@ export const LoginPage = () => {
               />
             </label>
           </div>
+          
           <div>
-            <label className="mt-2 flex">
+            <label className="mt-2 ">
               Password:
               <input
-                className="mt-4 flex border-2 border-x-gray-400 rounded-2xl items-center p-2 h-10 w-60"
+                className="mt-2 flex border-2 border-gray-400 rounded-lg  p-2 h-10 w-60"
                 type={showPassword ? "text" : "password"}
                 value={password}
                 placeholder="Enter password"
@@ -74,6 +75,7 @@ export const LoginPage = () => {
             </input>
             Show Password
           </label>
+          <div className='border-t-2 border-gray-600'>
           <Btn buttonName=
             {loading ? (<div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white"
               role="status">
@@ -81,6 +83,8 @@ export const LoginPage = () => {
                 Loading...
               </span>
             </div>) : 'Login'} />
+          </div>
+          
           {error && <div>{error}</div>}
         </form>
       </div>

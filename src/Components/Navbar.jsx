@@ -7,7 +7,7 @@ export const Navbar = () => {
       <Link to="/">
         <div className="flex items-center space-x-4">
           <img className="h-8" src="logo.jfif" alt="Logo" />
-          <h1 className="text-lg">Cat - Lover</h1>
+          <h1 className="text-lg">Pet - Lover</h1>
         </div>
       </Link>
       <div className="hidden md:flex items-center space-x-6">
