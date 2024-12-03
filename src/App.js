@@ -1,13 +1,9 @@
 import './App.css';
-import LoginPage from './Pages/LoginPage';
+import { Main } from './Routes/Main';
 
 function App() {
   return (
-    // <div className="App bg-black flex text-white">
-    //   Hello
-
-    // </div>
-    <LoginPage />
+    <Main />
   );
 }
 
