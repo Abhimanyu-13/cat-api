@@ -5,7 +5,7 @@ export const Home = () => {
   return (
     <>
     <Navbar />
-    <div className='justify-center flex text-center'>Home</div>
+    {/* <div className='justify-center flex  text-center bg-slate-900'>Home</div> */}
     </>
   )
 }
