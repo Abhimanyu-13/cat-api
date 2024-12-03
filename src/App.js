@@ -1,11 +1,13 @@
 import './App.css';
+import LoginPage from './Pages/LoginPage';
 
 function App() {
   return (
-    <div className="App bg-black flex ">
-      Hello
+    // <div className="App bg-black flex text-white">
+    //   Hello
 
-    </div>
+    // </div>
+    <LoginPage />
   );
 }
 
