@@ -1,5 +1,6 @@
 import React from 'react'
 import { Navbar } from '../Components/Navbar'
+import { Link } from 'react-router-dom'
 
 export const Home = () => {
   return (
@@ -14,9 +15,9 @@ export const Home = () => {
         Cats
       </h1>
       </div>  
-      <div className='flex justify-center'>
-        Dogs
-        </div>  
+       <div className='flex justify-center'>
+        <Link to= "/cats"> <button className='bg-navbarColor text-white p-2 rounded-xl hover:font-bold'>Get to the Breeds Page</button></Link>
+        </div>   
     </div>
     </>
   )
