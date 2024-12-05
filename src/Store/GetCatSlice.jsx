@@ -10,7 +10,6 @@ export const getBreeds = createAsyncThunk(
                 }
             })
             const data = await response.data;
-            console.log(data);
             return data;
         }
         catch (error) {
