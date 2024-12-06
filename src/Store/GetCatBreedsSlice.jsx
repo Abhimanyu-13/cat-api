@@ -4,9 +4,10 @@ import axios from "axios";
 export const getBreeds = createAsyncThunk(
     'getBreeds', async () => {
         try {
-            const response = await axios.get('https://api.thecatapi.com/v1/breeds?limit=20&has_image=true',{
+            const response = await axios.get('https://api.thecatapi.com/v1/breeds?limit=30',{
                 headers:{
-                    'x-api-key':"live_nDfI6JgqoltZKSsHmVr4LG41dyKBmzTGJnu8ocN94q5Mw0MKeopJrHGTadFhhZ3k"
+                    'x-api-key':"live_nDfI6JgqoltZKSsHmVr4LG41dyKBmzTGJnu8ocN94q5Mw0MKeopJrHGTadFhhZ3k",
+                    "Content-Type": "application/json",
                 }
             })
             const data = await response.data;
@@ -25,7 +26,6 @@ const getCatsBreeds = createSlice({
         breeds: [],
         error : false,
     },
-    reducers: {},
     extraReducers: (builder) => {
         builder.addCase(getBreeds.pending,(state) => {
             state.loading = true;

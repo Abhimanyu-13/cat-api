@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import userReducer from './UserSlice';
-import catBreedsReducer from './GetCatSlice';
+import selectedCatBreedReducer from './GetSelectedBreedDetailSlice'
+import catBreedsReducer from './GetCatBreedsSlice';
 
 const store = configureStore({
     reducer: {
         user: userReducer,
         catBreeds: catBreedsReducer,
+        selectedCatBreed: selectedCatBreedReducer,
     },
 });
 
