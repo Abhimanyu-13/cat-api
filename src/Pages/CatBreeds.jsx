@@ -65,7 +65,7 @@ export const CatBreeds = () => {
         </div>
         <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-32 xl:grid-cols-4 2xl:grid-cols-5 gap-4 p-4">
           {breeds.map((breed) => (
-            <div key={breed.id} className='bg-white p-4 rounded-3xl border-2 shadow-xl'>
+            <div key={breed.id} className='bg-white p-2 rounded-3xl border-2 shadow-xl'>
               <Link to={`breeds/${breed.id}`}>
               <div className='justify-center flex items-center'>
                 <img src={breed.image.url} alt={breed.name} className='rounded-xl p-4 border-gray-300 h-40 lg:h-60 w-60  cursor-pointer border-2 mb-4' />

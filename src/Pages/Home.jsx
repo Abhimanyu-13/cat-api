@@ -1,13 +1,12 @@
-import React,{useEffect} from 'react'
-import { getBreeds } from '../Store/GetCatBreedsSlice'
-import { useDispatch,useSelector } from 'react-redux'
-import { Navbar } from '../Components/Navbar'
-import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react';
+import { getBreeds } from '../Store/GetCatBreedsSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { Navbar } from '../Components/Navbar';
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
   const dispatch = useDispatch();
-  const { loading,  error } = useSelector((state) => state.catBreeds);
-
+  const { loading, error } = useSelector((state) => state.catBreeds);
   useEffect(() => {
     dispatch(getBreeds());
   }, [dispatch]);
@@ -53,22 +52,46 @@ export const Home = () => {
       </div>
     </>
   )
-  if (error) return <p>Error: {error}</p>;
+
+  if (error) return <p className="text-center text-red-600">Error: {error}</p>;
 
   return (
     <>
       <Navbar />
-      <div className=' items-center  shadow-2xl '>
-        <div className="lg:h-screen bg-gradient-to-r from-purple-400 to-blue-300">
-          <h1 className='flex ms-4 h-60 items-center text-[20px] lg:text-[48px] font-bold '>
-            Welcome to the world of Cats
+      <div className="flex flex-col items-center bg-gradient-to-b from-purple-200 to-blue-100 min-h-screen p-8">
+        <div className="bg-white rounded-lg shadow-xl border border-gray-200 w-full max-w-4xl text-center p-8">
+          <h1 className="text-[20px] lg:text-[36px] text-gray-700 text-center font-bold mb-4">
+            Cats, and Kittens, and Cat Lovers, Oh My!
           </h1>
-        </div>
-        <div className='flex justify-center items-center'>
-
-          <Link to="/cat-breeds"> <button className='bg-navbarColor items-center text-white px-4 font-semibold h-10 text-[20px] py-2 rounded-xl hover:font-bold'>Let's Explore</button></Link>
+          <p className="text-[20px] lg:text-[32px] text-gray-600 mb-6">
+            Welcome to the world of Cats.
+          </p>
+          <div className='grid grid-cols-1 lg:grid-cols-2 mt-4'>
+            <div>
+              <h1 className='flex lg:text-[18px] text-[16px]  font-semibold justify-start'>Do You Love Cats ?</h1>
+              <p className='lg:text-[18px] text-[16px] flex text-start font-normal'>
+                This is the place where cat lovers gather to meow, purr, and roar about, what else? Cats!
+                </p><br />
+                <p className='lg:text-[18px] text-[16px] flex text-start font-normal'>
+                Now you can better understand, love, and care for your pet.
+                </p><br />
+                <p className='lg:text-[18px] text-[16px] flex text-start font-normal'>
+                Here you'll find the best growing collection of cat and kitten related information, products, and resources on the Net.
+              </p><br />
+            </div>
+            <div>
+              <img
+                className='lg:w-full lg:h-full rounded-lg'
+                src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmQE7iVPEL0zQ_Nv4WeNUc54kT9g3gJx1hxQ&s' alt=""></img>
+            </div>
+          </div>
+          <Link to="/cat-breeds">
+            <button className="mt-8 bg-navbarColor text-white px-6 py-3 text-lg lg:text-xl font-semibold rounded-xl hover:bg-opacity-90 transition">
+              Let's Explore
+            </button>
+          </Link>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
